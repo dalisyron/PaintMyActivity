@@ -10,7 +10,7 @@ import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.widget.Button
 
-class ColoredButton(context : Context, val colorId : String) : Button(context) {
+class ColoredButton(context : Context, var colorId : Int, var colorName : String) : Button(context) {
 
 }
 
@@ -29,21 +29,22 @@ class MainActivity : AppCompatActivity() {
         val buttonColors = listOf(Color.RED, Color.GREEN, Color.rgb(255,165,0), Color.rgb(128,0,128), Color.YELLOW, Color.BLUE)
         val colorNames = listOf("Red", "Green", "Orange", "Purple", "Yellow", "Blue")
 
-        val buttons : List<Button> = buttonIDs.map { findViewById<Button>(it) }
+        val buttons : List<ColoredButton> = buttonIDs.map { findViewById<ColoredButton>(it) }
 
-        buttons.forEachIndexed { index, button ->  button.setBackgroundColor(buttonColors[index])}
-        for (button in buttons) {
+        buttons.forEachIndexed { index, button ->
+            button.setBackgroundColor(buttonColors[index])
+            button.colorId = buttonColors[index]
+            button.colorName = colorNames[index]
             button.setTextColor(Color.WHITE)
         }
-
         //textColor for button with yellow bg color
         buttons[4].setTextColor(Color.BLACK)
 
-        buttons.forEachIndexed { index, button ->
+        buttons.forEach { button ->
             button.setOnClickListener {
                 val intent = Intent(this, ShowMyColor::class.java)
-                intent.putExtra(CLICKED_COLOR_ID, buttonColors[index])
-                intent.putExtra(CLICKED_COLOR_NAME, colorNames[index])
+                intent.putExtra(CLICKED_COLOR_ID, button.colorId)
+                intent.putExtra(CLICKED_COLOR_NAME, button.colorName)
                 startActivity(intent)
             }
         }

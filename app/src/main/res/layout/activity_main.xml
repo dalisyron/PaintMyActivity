@@ -7,32 +7,32 @@
         android:gravity="center"
         tools:context=".MainActivity">
 
-    <Button
+    <com.example.paintmyactivity.ColoredButton
             android:id="@+id/redBtn"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_margin="12sp"
             android:text="Red"/>
 
-    <Button
+    <com.example.paintmyactivity.ColoredButton
             android:id="@+id/greenBtn"
             android:layout_margin="12sp"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_toRightOf="@+id/redBtn"
             android:text="Green"
-            />
+    />
 
-    <Button
+    <com.example.paintmyactivity.ColoredButton
             android:id="@+id/orangeBtn"
             android:layout_margin="12sp"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_below="@+id/redBtn"
             android:text="Orange"
-            />
+    />
 
-    <Button
+    <com.example.paintmyactivity.ColoredButton
             android:id="@+id/purpleBtn"
             android:layout_margin="12sp"
             android:layout_width="100dp"
@@ -40,9 +40,9 @@
             android:layout_toRightOf="@id/orangeBtn"
             android:layout_below="@id/greenBtn"
             android:text="Purple"
-            />
+    />
 
-    <Button
+    <com.example.paintmyactivity.ColoredButton
             android:id="@+id/yellowBtn"
             android:layout_margin="12sp"
             android:layout_width="100dp"
@@ -50,7 +50,7 @@
             android:layout_below="@id/orangeBtn"
             android:text="Yellow"/>
 
-    <Button
+    <com.example.paintmyactivity.ColoredButton
             android:id="@+id/blueBtn"
             android:layout_width="100dp"
             android:layout_height="60dp"
