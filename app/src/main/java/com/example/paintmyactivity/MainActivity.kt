@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             button.setTextColor(Color.WHITE)
         }
 
-        //textColor for button with black bg color
+        //textColor for button with yellow bg color
         buttons[4].setTextColor(Color.BLACK)
 
         buttons.forEachIndexed { index, button ->
