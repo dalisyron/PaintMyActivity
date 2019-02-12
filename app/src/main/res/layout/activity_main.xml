@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:context=".MainActivity">
+
+    <Button
+            android:id="@+id/redBtn"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="12sp"
+            android:text="Red"/>
+
+    <Button
+            android:id="@+id/greenBtn"
+            android:layout_margin="12sp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/redBtn"
+            android:text="Green"
+            />
+
+    <Button
+            android:id="@+id/orangeBtn"
+            android:layout_margin="12sp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/redBtn"
+            android:text="Orange"
+            />
+
+    <Button
+            android:id="@+id/purpleBtn"
+            android:layout_margin="12sp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@id/orangeBtn"
+            android:layout_below="@id/greenBtn"
+            android:text="Purple"
+            />
+
+    <Button
+            android:id="@+id/yellowBtn"
+            android:layout_margin="12sp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/orangeBtn"
+            android:text="Yellow"/>
+
+    <Button
+            android:id="@+id/blueBtn"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="12sp"
+            android:layout_below="@id/purpleBtn"
+            android:layout_toRightOf="@id/yellowBtn"
+            android:text="Blue"/>
+</RelativeLayout>
