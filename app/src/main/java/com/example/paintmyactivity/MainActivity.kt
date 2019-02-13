@@ -17,8 +17,8 @@ class ColoredButton(context : Context, val colorId : String) : Button(context) {
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        val CLICKED_COLOR_ID : String = "clickedColorID"
-        val CLICKED_COLOR_NAME : String = "clickedColorName"
+        const val CLICKED_COLOR_ID : String = "clickedColorID"
+        const val CLICKED_COLOR_NAME : String = "clickedColorName"
 
     }
     override fun onCreate(savedInstanceState: Bundle?) {
